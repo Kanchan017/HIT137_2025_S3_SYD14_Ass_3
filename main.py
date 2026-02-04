@@ -1,8 +1,13 @@
-from gUiComponents.appUI import photoEnhancerApp
+import tkinter as tk
+from gUiComponents.gui import PhotoEnhancerGUI
 
 def main():
-    app = photoEnhancerApp()
-    app.run()
-
-if __name__ == "__main__":
+    root = tk.Tk()
+    app = PhotoEnhancerGUI(root)
+    def onResize(_ev=None):
+        app._update_image_display()
+    root.bind('<Configure>', onResize)
+    root.mainloop()
+    
+if __name__ == '__main__':
     main()
