@@ -8,7 +8,7 @@ import numpy as np
 from models.image_model import ImageModel
 from processors.image_processor import ImageProcessor
 
-
+# Class to control overall functioning
 class PhotoEnhancerGUI:
     def __init__(self, root):
         self.root = root
