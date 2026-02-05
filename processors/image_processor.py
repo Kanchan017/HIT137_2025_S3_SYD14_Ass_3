@@ -2,7 +2,6 @@
 import cv2
 import numpy as np
 
-
 class ImageProcessor:
     @staticmethod
     def to_grayscale(img: np.ndarray) -> np.ndarray:
@@ -28,6 +27,7 @@ class ImageProcessor:
         out = cv2.convertScaleAbs(img, alpha=alpha, beta=beta)
         return out
                 
+             
     @staticmethod
     def rotate(img: np.ndarray, angle: float) -> np.ndarray:
         if angle % 360 == 0:
